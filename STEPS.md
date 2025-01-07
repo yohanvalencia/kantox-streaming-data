@@ -1,5 +1,7 @@
 # Deploy solution
 
+Before we start we need to unzip data/events.json.zip
+
 1. cd api
 2. docker image build -t acme-python-api .
 3. cd ..
