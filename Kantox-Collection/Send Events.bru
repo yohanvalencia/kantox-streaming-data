@@ -1,0 +1,26 @@
+meta {
+  name: Send Events
+  type: http
+  seq: 3
+}
+
+post {
+  url: http://localhost:60000/collect
+  body: json
+  auth: none
+}
+
+body:json {
+  [
+    {
+      "id": 367858,
+      "type": "placed_order",
+      "event": {
+        "user_agent": "Opera/9.49.(X11; Linux x86_64; mhr-RU) Presto/2.9.188 Version/11.00",
+        "ip": "134.147.148.171",
+        "customer_id": 1404,
+        "timestamp": "2022-05-25T05:41:33.648681"
+      }
+    }
+  ]
+}

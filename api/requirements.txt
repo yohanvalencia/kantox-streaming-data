@@ -1,0 +1,5 @@
+flask==3.0.3
+fastavro==1.10.0
+confluent-kafka[avro,schemaregistry]==2.7.0
+pytest-mock==3.14.0
+pytest==8.1.1

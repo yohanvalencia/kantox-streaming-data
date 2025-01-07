@@ -1,0 +1,1 @@
+CREATE TABLE unique_customer_id_per_day WITH ( KAFKA_TOPIC='acme.clickstream.unique.users', VALUE_FORMAT='JSON' ) AS SELECT SUBSTRING(event->timestamp, 1, 10) AS key, AS_VALUE(SUBSTRING(event->timestamp, 1, 10)) AS timestamp, COUNT_DISTINCT(event->customer_id) AS unique_users FROM latest_events WHERE event->customer_id IS NOT NULL GROUP BY SUBSTRING(event->timestamp, 1, 10);
